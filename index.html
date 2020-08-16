@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+  <title>WBS</title>
+  <style>
+    .testDiv {
+      width: 100%;
+      height: 100%;
+    }
+
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="intro" style="font-family: Arial;">Click Anywhere to Start</h1>
+  <div class="testDiv"></div>
+</body>
+<script src="dist/wbs.js"></script>
+<script>
+  window.addEventListener('click', () => {
+    var intro = document.querySelector('#intro')
+    if (!intro) return
+    intro.parentElement.removeChild(intro)
+
+    var wbs = new WBS('div')
+  })
+</script>
+
+</html>
